@@ -10,3 +10,5 @@
 
 ## DC Analysis 
 Given information: Power = 100microwatts
+Id(drain current) = 55.5uA
+
