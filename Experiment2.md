@@ -119,6 +119,11 @@ Source resistance Rss enhances CMRR and linearity, contributing to better perfor
 
 Further refinements can be made by improving layout, adjusting resistance values, and optimizing transistor dimensions.
 
+## Circuit 4
+
+### **Step 1**
+### DC Analysis 
+
 
 
 
