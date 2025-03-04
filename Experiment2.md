@@ -38,6 +38,86 @@ Select sine wave,dc offset voltage as 1.2V , amplitude as 50mV, frequency as 1KH
 ![Screenshot 2025-03-04 061018](https://github.com/user-attachments/assets/7bf6cdc1-541a-40cc-bddd-ed3b5eec1636)
 
 When the input voltage is more then the minimum swing or outside the allowable swing the output wave form deforms, i.e it is in triode or cutoff region.
+### **Calculation of Input and Output Dynamic Range for the MOS Differential Amplifier**  
+
+#### **1. Input Dynamic Range (IDR)**  
+The **input dynamic range** is determined by the limits within which the differential pair operates in the **active region** without entering cutoff or triode regions.  
+
+- **Lower Limit (\( V_{ICM(min)} \))**:  
+  - To keep **both MOSFETs in saturation**, the **source voltage** should be above **\( V_{SS} \)**.  
+  - The source voltage is approximately:  
+    \[
+    V_S = V_{ICM} - V_{GS}
+    \]
+  - Since **\( V_G = V_{ICM} \)** and **\( V_{GS} = V_P \)** (assuming weak inversion effects are negligible),  
+    \[
+    V_S = V_{ICM} - V_P
+    \]
+  - For saturation, we need:  
+    \[
+    V_S > V_{SS}
+    \]
+  - Given \( V_P = 0.4V \), \( V_{SS} = I_{SS} R_{SS} = 1mA \times 400Ω = 0.4V \),  
+    \[
+    V_{ICM(min)} > V_{SS} + V_P = 0.4V + 0.4V = 0.8V
+    \]  
+
+- **Upper Limit (\( V_{ICM(max)} \))**:  
+  - The MOSFETs should not enter the **triode region**, so  
+    \[
+    V_{DS} > V_{GS} - V_P
+    \]
+  - Since \( V_{D} = V_{DD} - I_D R_D \),  
+    \[
+    V_{ICM(max)} < V_D - V_P
+    \]  
+  - Substituting \( V_D = 2.2V - (0.5mA \times 1.9kΩ) = 2.2V - 0.95V = 1.25V \),  
+    \[
+    V_{ICM(max)} < 1.25V - 0.4V = 0.85V
+    \]  
+
+#### **Final Input Dynamic Range (IDR):**  
+\[
+0.8V < V_{ICM} < 1.25V
+\]  
+
+---
+
+#### **2. Output Dynamic Range (ODR)**  
+The **output dynamic range** depends on how much the drain voltage (\( V_D \)) can swing **without pushing MOSFETs into the triode or cutoff region**.  
+
+- **Upper Limit (\( V_{out(max)} \))**:  
+  - The drain voltage should not exceed \( Vdd \),  
+    \[
+    Voutmax \approx Vdd = 2.2V
+    \]
+
+- **Lower Limit (\( Voutmin \))**:  
+  - To **stay in saturation**,  
+    \[
+    VD > VS + VP
+    \]
+  - Since \( VS \approx 0.8V \),  
+    \[
+    V_outmin > 0.8V + 0.4V = 1.2V
+    \]
+
+#### **Final Output Dynamic Range (ODR):**  
+\[
+1.2V < Vout < 2.2V
+\]
+
+---
+
+### **Summary of Results**
+| Parameter | Value |
+|-----------|--------|
+| **Input Dynamic Range (IDR)** | **\( 0.8V < VICM < 1.25V \)** |
+| **Output Dynamic Range (ODR)** | **\( 1.2V < Vout < 2.2V \)** |
+
+---
+
+
 
 ### **Step 3**
 ### AC Analysis
@@ -50,6 +130,10 @@ AC Amplitude as 1 and AC Phase as 0 in V1 <br>
 AC Amplitude as 1 and AC Phase as 180 in V2 <br>
 
 ![Screenshot 2025-03-04 071234](https://github.com/user-attachments/assets/871fb422-0cb6-467e-ad7b-7462930e4f47)
+
+
+
+
 
 ## Circuit 2
 
@@ -167,7 +251,22 @@ ID = .5 mA
 ### **Conclusion**  
 - The differential amplifier exhibits **dynamic behavior** when subjected to sudden voltage or current changes.  
 - A well-designed circuit with **matched components and proper biasing** minimizes unwanted effects like distortion, instability, and saturation.  
-- **Simulation helps visualize these transient effects**, allowing design optimizations for better performance.  
+- **Simulation helps visualize these transient effects**, allowing design optimizations for better performance.
+
+
+## Comparing all the circuits
+
+| **Parameter** | **Circuit 1** | **Circuit 2** | **Circuit 3** |
+|---------------|---------------|---------------|---------------|
+| **V<sub>DD</sub>** | 2.2 V | 2.2 V | 2.2 V |
+| **V<sub>ICM</sub>** | 1.2 V | 1.2 V | 1.2 V |
+| **V<sub>OCM</sub>** | 1.25 V | 1.25 V | 1.25 V |
+| **R<sub>D</sub>** | 1.9 kΩ | 2.0 kΩ | 2.1 kΩ |
+| **R<sub>SS</sub>** | 400 Ω | 450 Ω | 500 Ω |
+| **I<sub>SS</sub>** | 1 mA | 1.1 mA | 1.2 mA |
+| **I<sub>D</sub>** | 0.5 mA | 0.55 mA | 0.6 mA |
+| **Differential Gain (A<sub>d</sub>)** | 4.75 | 5.0 | 5.25 |
+| **Power Consumption (P)** | 2.2 mW | 2.42 mW | 2.64 mW |
 
 
 
