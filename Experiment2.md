@@ -44,41 +44,41 @@ When the input voltage is more then the minimum swing or outside the allowable s
 The **input dynamic range** is determined by the limits within which the differential pair operates in the **active region** without entering cutoff or triode regions.  
 
 - **Lower Limit (\( V_{ICM(min)} \))**:  
-  - To keep **both MOSFETs in saturation**, the **source voltage** should be above **\( V_{SS} \)**.  
+  - To keep **both MOSFETs in saturation**, the **source voltage** should be above **\( VSS \)**.  
   - The source voltage is approximately:  
     \[
-    V_S = V_{ICM} - V_{GS}
+    VS = VICM - VGS
     \]
-  - Since **\( V_G = V_{ICM} \)** and **\( V_{GS} = V_P \)** (assuming weak inversion effects are negligible),  
+  - Since **\( VG = VICM \)** and **\( VGS = VP \)** 
     \[
-    V_S = V_{ICM} - V_P
+    VS = VICM - VP
     \]
   - For saturation, we need:  
     \[
-    V_S > V_{SS}
+    VS > VSS
     \]
-  - Given \( V_P = 0.4V \), \( V_{SS} = I_{SS} R_{SS} = 1mA \times 400Ω = 0.4V \),  
+  - Given \( VP = 0.4V \), \( VSS = ISS RSS = 1mA \times 400Ω = 0.4V \),  
     \[
-    V_{ICM(min)} > V_{SS} + V_P = 0.4V + 0.4V = 0.8V
+    V_ICMmin > VSS + VP = 0.4V + 0.4V = 0.8V
     \]  
 
-- **Upper Limit (\( V_{ICM(max)} \))**:  
+- **Upper Limit (\( VICMmax \))**:  
   - The MOSFETs should not enter the **triode region**, so  
     \[
-    V_{DS} > V_{GS} - V_P
+    VDS > VGS - VP
     \]
-  - Since \( V_{D} = V_{DD} - I_D R_D \),  
+  - Since \( VD = VDD - ID RD \),  
     \[
-    V_{ICM(max)} < V_D - V_P
+    VICMmax < VD - VP
     \]  
-  - Substituting \( V_D = 2.2V - (0.5mA \times 1.9kΩ) = 2.2V - 0.95V = 1.25V \),  
+  - Substituting \( VD = 2.2V - (0.5mA \times 1.9kΩ) = 2.2V - 0.95V = 1.25V \),  
     \[
-    V_{ICM(max)} < 1.25V - 0.4V = 0.85V
+    VICMmax < 1.25V - 0.4V = 0.85V
     \]  
 
 #### **Final Input Dynamic Range (IDR):**  
 \[
-0.8V < V_{ICM} < 1.25V
+0.8V < VICM < 1.25V
 \]  
 
 ---
@@ -86,7 +86,7 @@ The **input dynamic range** is determined by the limits within which the differe
 #### **2. Output Dynamic Range (ODR)**  
 The **output dynamic range** depends on how much the drain voltage (\( V_D \)) can swing **without pushing MOSFETs into the triode or cutoff region**.  
 
-- **Upper Limit (\( V_{out(max)} \))**:  
+- **Upper Limit (\( Voutmax \))**:  
   - The drain voltage should not exceed \( Vdd \),  
     \[
     Voutmax \approx Vdd = 2.2V
