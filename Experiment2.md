@@ -95,8 +95,29 @@ set the operating point of M3 such that It is in saturation state. Vb=0.4 V
 
 ![Screenshot 2025-03-04 071234](https://github.com/user-attachments/assets/c0eddf78-bcaf-413d-a13c-779455cc73c8)
 
+## Result and Inference
 
+Vdd = 2.2 V
 
+Vp = 0.4 V
+
+VICM = 1.2 V
+
+VOCM = 1.25 V
+
+RD = 1.9 kohm
+
+Rss = 400 ohm
+
+Iss = 1mA
+
+ID = .5 mA
+
+Slight variation in Vocm suggests possible mismatch effects, which can be reduced through better transistor matching.
+
+Source resistance Rss enhances CMRR and linearity, contributing to better performance.
+
+Further refinements can be made by improving layout, adjusting resistance values, and optimizing transistor dimensions.
 
 
 
