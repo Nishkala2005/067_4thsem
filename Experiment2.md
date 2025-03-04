@@ -70,6 +70,34 @@ Replace the resistor with a current source of 1mA.
 
 ![Screenshot 2025-03-04 071234](https://github.com/user-attachments/assets/f6f467c8-6eb1-43b4-8149-d6dd4b8e8aab)
 
+## Circuit 3
+
+Replace current source with nMOSFET
+
+![Screenshot 2025-03-04 073351](https://github.com/user-attachments/assets/aca8e7ea-02ce-4819-87fd-f7236d999fc6)
+
+Vb should be less than Vp as the drain voltage of MOSFET M3 is Vp and the Vb should be greater than the Vth , therefore the value of Vb should be between 0.366 V and 0.4V.
+
+### **Step 1**
+### DC Analysis
+set the operating point of M3 such that It is in saturation state. Vb=0.4 V
+
+![Screenshot 2025-03-04 073253](https://github.com/user-attachments/assets/ec2daa3e-4c69-4a7e-a1f1-99630d55476b)
+
+
+### **Step 2**
+### Transient Analysis
+![Screenshot 2025-03-04 073929](https://github.com/user-attachments/assets/887ccbe6-3ed4-4add-91f1-5aa6dff134e8)
+![Screenshot 2025-03-04 073951](https://github.com/user-attachments/assets/656135fd-e025-4a8a-9fa2-25cddbe37df2)
+
+### **Step 3**
+### AC Analysis
+
+![Screenshot 2025-03-04 071234](https://github.com/user-attachments/assets/c0eddf78-bcaf-413d-a13c-779455cc73c8)
+
+
+
+
 
 
 
