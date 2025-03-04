@@ -120,12 +120,22 @@ Source resistance Rss enhances CMRR and linearity, contributing to better perfor
 Further refinements can be made by improving layout, adjusting resistance values, and optimizing transistor dimensions.
 
 ## Circuit 4
+![Screenshot 2025-03-04 195725](https://github.com/user-attachments/assets/d99ea730-c465-4262-acfd-bf01df26e54f)
 
 ### **Step 1**
 ### DC Analysis 
+![Screenshot 2025-03-04 195745](https://github.com/user-attachments/assets/188d8faf-a60d-4925-a8fc-269bb4e049a0)
 
+### ** Step 2**
+### Transient Analysis
+![Screenshot 2025-03-04 195842](https://github.com/user-attachments/assets/746ec562-0218-453f-8959-07b895811b9c)
 
+![Screenshot 2025-03-04 195858](https://github.com/user-attachments/assets/6149c5fe-1fca-4413-a7fb-a73fbc3b07bf)
 
+### **Step 3**
+### AC Analysis
+
+![Screenshot 2025-03-04 200041](https://github.com/user-attachments/assets/1e6a97d4-c924-48ce-8f5d-b39499bc4add)
 
 
 
