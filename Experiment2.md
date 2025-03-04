@@ -220,38 +220,24 @@ ID = .5 mA
 
 
 
-1. **Transient Response Analysis**  
+ 
    - When a sudden change (step input) is applied to the differential amplifier, the circuit takes some time to settle due to capacitances (parasitic and intentional) in the system.  
    - This results in an initial overshoot or undershoot before stabilizing.  
 
-2. **Effect on Biasing and Stability**  
    - A rapid change in input voltage can momentarily **shift the operating point** of transistors, leading to temporary distortion or non-linearity.  
    - If the circuit is not properly biased, large input variations may push transistors into saturation or cutoff regions, affecting amplification.  
-
-3. **Common-Mode Response**  
-   - A sudden **common-mode change** (both inputs increase or decrease simultaneously) should ideally be rejected if CMRR is high.  
-   - However, practical mismatches in resistors and transistors can cause unwanted fluctuations in the output.  
-
-4. **Current Variations and Thermal Effects**  
-   - A sudden increase in input voltage leads to a rapid increase in collector/drain current, which can generate heat and potentially **alter transistor parameters** (e.g., **Vbe drift in BJTs** or **threshold voltage shift in MOSFETs**).  
+     
+   - A sudden increase in input voltage leads to a rapid increase in collector/drain current, which can generate heat and potentially **alter transistor parameters** .  
    - In extreme cases, excessive current surges could damage transistors if proper current limiting is not in place.  
 
-5. **Power Supply Fluctuations**  
    - If the power supply undergoes sudden voltage changes, it can cause **glitches** in the output due to transient response limitations of the amplifier.  
    - Using a **constant current source** as the tail current can help improve stability against such variations.  
-
-6. **Parasitic Capacitance and High-Frequency Effects**  
+ 
    - Sudden changes in input signals can introduce **ringing or oscillations** due to parasitic capacitances and inductances in the circuit.  
-   - To mitigate this, adding small **compensation capacitors** can help control the high-frequency response.  
 
-7. **Simulation Observations**  
    - By running **transient analysis** in LTspice the response time, overshoot, and stability of the circuit can be observed.  
    - A **step input** can be used to analyze how quickly the amplifier settles to a steady-state output.  
 
-### **Conclusion**  
-- The differential amplifier exhibits **dynamic behavior** when subjected to sudden voltage or current changes.  
-- A well-designed circuit with **matched components and proper biasing** minimizes unwanted effects like distortion, instability, and saturation.  
-- **Simulation helps visualize these transient effects**, allowing design optimizations for better performance.
 
 
 ## Comparing all the circuits
