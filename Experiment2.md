@@ -140,12 +140,12 @@ AC Amplitude as 1 and AC Phase as 180 in V2 <br>
 Replace the resistor with a current source of 1mA.
 ![Screenshot 2025-03-04 071746](https://github.com/user-attachments/assets/432baa90-8829-4c0a-832d-5ee0b15aa707)
 
-### ** Step 1**
+### **Step 1**
 ### DC Analysis
 
 ![Screenshot 2025-03-04 071659](https://github.com/user-attachments/assets/c46f838f-ff04-492f-b606-857aaab3225c)
 
-### ** Step 2**
+### **Step 2**
 ### Transient Analysis
 ![Screenshot 2025-03-04 061018](https://github.com/user-attachments/assets/f81acb50-fff4-4c01-b8d5-25d8d413b5ee)
 
