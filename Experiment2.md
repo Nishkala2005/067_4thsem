@@ -179,6 +179,20 @@ set the operating point of M3 such that It is in saturation state. Vb=0.4 V
 
 ![Screenshot 2025-03-04 071234](https://github.com/user-attachments/assets/c0eddf78-bcaf-413d-a13c-779455cc73c8)
 
+## Comparing all the circuits
+
+| **Parameter** | **Circuit 1** | **Circuit 2** | **Circuit 3** |
+|---------------|---------------|---------------|---------------|
+| **V<sub>DD</sub>** | 2.2 V | 2.2 V | 2.2 V |
+| **V<sub>ICM</sub>** | 1.2 V | 1.2 V | 1.2 V |
+| **V<sub>OCM</sub>** | 1.25 V | 1.25 V | 1.25 V |
+| **R<sub>D</sub>** | 1.9 kΩ | 2.0 kΩ | 2.1 kΩ |
+| **R<sub>SS</sub>** | 400 Ω | 450 Ω | 500 Ω |
+| **I<sub>SS</sub>** | 1 mA | 1.1 mA | 1.2 mA |
+| **I<sub>D</sub>** | 0.5 mA | 0.55 mA | 0.6 mA |
+| **Differential Gain (A<sub>d</sub>)** | 4.75 | 5.0 | 5.25 |
+| **Power Consumption (P)** | 2.2 mW | 2.42 mW | 2.64 mW |
+
 
 
 ## Circuit 4
@@ -240,19 +254,7 @@ ID = .5 mA
 
 
 
-## Comparing all the circuits
 
-| **Parameter** | **Circuit 1** | **Circuit 2** | **Circuit 3** |
-|---------------|---------------|---------------|---------------|
-| **V<sub>DD</sub>** | 2.2 V | 2.2 V | 2.2 V |
-| **V<sub>ICM</sub>** | 1.2 V | 1.2 V | 1.2 V |
-| **V<sub>OCM</sub>** | 1.25 V | 1.25 V | 1.25 V |
-| **R<sub>D</sub>** | 1.9 kΩ | 2.0 kΩ | 2.1 kΩ |
-| **R<sub>SS</sub>** | 400 Ω | 450 Ω | 500 Ω |
-| **I<sub>SS</sub>** | 1 mA | 1.1 mA | 1.2 mA |
-| **I<sub>D</sub>** | 0.5 mA | 0.55 mA | 0.6 mA |
-| **Differential Gain (A<sub>d</sub>)** | 4.75 | 5.0 | 5.25 |
-| **Power Consumption (P)** | 2.2 mW | 2.42 mW | 2.64 mW |
 
 
 
