@@ -9,10 +9,23 @@ Matching between the two MOSFETs is crucial for proper operation and high-perfor
 Mismatches can introduce offset voltage, gain imbalance, and increased common-mode rejection errors.
 ## Circuit 1:
 
+### Differential amplifier circuit tailed with Rss resistor
+
+where Rss = .4Kohm
+
+
+
 ![Screenshot 2025-03-04 061530](https://github.com/user-attachments/assets/57a5f55e-69c5-430c-b3df-eef611b298ab)
 
 ### **Step 1**
 ### DC analysis:
+
+Before conducting dc analysis we neeed to make sure of following:
+* All DC biasing sources are correctly connected.
+* MOSFET models are included in the simulation.
+* Resistors and voltage sources are correctly placed.
+
+* 
 ![WhatsApp Image 2025-03-04 at 06 41 49_5b7d1de0](https://github.com/user-attachments/assets/32d8daf4-662b-4cf4-8099-986ac43a8312)
 From the calculation we get,
 
@@ -25,8 +38,12 @@ Set the operating point in configure analysis by selecting dc operating point.
 ![Screenshot 2025-03-04 064534](https://github.com/user-attachments/assets/5de93c76-3f65-4264-92ce-4e3de296e5da)
 
 For the appropriate dc operating point aspect ratio is 24.9 .
+
 ### **Step 2**
 ### Transient Analysis
+
+For Vincm = 1.2V(standard)
+![Screenshot 2025-03-04 061530](https://github.com/user-attachments/assets/57a5f55e-69c5-430c-b3df-eef611b298ab)
 
 Maximum input and output voltage swing
 
@@ -99,7 +116,7 @@ The **output dynamic range** depends on how much the drain voltage (\( V_D \)) c
     \]
   - Since \( VS \approx 0.8V \),  
     \[
-    V_outmin > 0.8V + 0.4V = 1.2V
+    Voutmin > 0.8V + 0.4V = 1.2V
     \]
 
 #### **Final Output Dynamic Range (ODR):**  
@@ -107,16 +124,22 @@ The **output dynamic range** depends on how much the drain voltage (\( V_D \)) c
 1.2V < Vout < 2.2V
 \]
 
----
+For Vincm = 1V
+![Screenshot 2025-03-06 074856](https://github.com/user-attachments/assets/934e4c91-1ed2-4dbb-92f3-63748ccccb09)
 
-### **Summary of Results**
-| Parameter | Value |
-|-----------|--------|
-| **Input Dynamic Range (IDR)** | **\( 0.8V < VICM < 1.25V \)** |
-| **Output Dynamic Range (ODR)** | **\( 1.2V < Vout < 2.2V \)** |
 
----
+For Vincm = .5V
+![Screenshot 2025-03-06 074931](https://github.com/user-attachments/assets/5b1439ea-2c0c-42ff-ad49-35678637c16f)
 
+
+
+| **Parameter**         | **Theoretical (1.2V)** | **Simulation (1.2V)** | **Theoretical (1V)** | **Simulation (1V)** | **Theoretical (0.5V)** | **Simulation (0.5V)** |
+|----------------------|----------------|-----------------|----------------|-----------------|----------------|-----------------|
+| **Voltage Gain (\(Av\))** | 1.34 V/V | ~1.4 V/V | 1.42 V/V | ~1.45 V/V | 1.5 V/V | ~1.55 V/V |
+| **Output Swing (\(Voutpp\))** | 1.14V | ~1.1V | 1.2V | ~1.18V | 1.3V | ~1.25V |
+| **Input Swing (\(Vinpp\))** | 0.85V | ~0.8V | 0.8V | ~0.75V | 0.75V | ~0.7V |
+| **\(Voutmin\)** | 1.03V | ~1.05V | 1.1V | ~1.12V | 1.2V | ~1.22V |
+| **\(Voutmax\)** | 2.17V | ~2.1V | 2.2V | ~2.15V | 2.3V | ~2.25V |
 
 
 ### **Step 3**
