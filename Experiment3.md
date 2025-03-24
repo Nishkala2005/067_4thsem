@@ -3,3 +3,5 @@
 1. Introduction
 A current mirror is a circuit that copies (mirrors) a reference current to another branch while maintaining a constant current despite variations in voltage. It is widely used in biasing circuits, analog IC design, and active loads in amplifiers.
 ### Design and analyze current mirror circuit as load active in amplifier circuit
+#### Circuit 1
+Circuit Parameters: gain<= -10V/V   Vdd = 1.8V
