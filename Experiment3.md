@@ -2,11 +2,14 @@
 ## Current Mirrors
 1. Introduction
 A current mirror is a circuit that copies (mirrors) a reference current to another branch while maintaining a constant current despite variations in voltage. It is widely used in biasing circuits, analog IC design, and active loads in amplifiers.
-### Design and analyze current mirror circuit as load active in amplifier circuit
+
 #### Part 1
+### Design and analyze current mirror circuit as load active in amplifier circuit
+
 Circuit Parameters: gain<= -10V/V   Vdd = 1.8V
 I_total = I_ref + I_x
 I_total = P/Vdd
+### length = 180n
 #### Design for Current mirror 1:1 ratio
 I_Ref = I_x = 0.277mA
 ![image](https://github.com/user-attachments/assets/f1fba6aa-51bd-47fc-a39f-9434fc4b1305)
@@ -42,6 +45,70 @@ Bandwidth ≈ 100 MHz.
 
 Gain ≈ 30 dB
 
-Bandwidth ≈ ~1 GHz
+Bandwidth ≈ ~200MHz
 
-#### Design for Current mirror 1:5 ratio
+#### Design for Current mirror 1:4 ratio
+
+![image](https://github.com/user-attachments/assets/242730c8-fdb1-4028-a85b-2a4c648d4edc)
+
+#### DC Analysis
+
+![image](https://github.com/user-attachments/assets/dc4e1220-2a27-4c20-9f98-0f01c086e5e6)
+
+#### Transient Analysis
+
+![image](https://github.com/user-attachments/assets/3d2cf079-a68a-490d-ae39-3bdbd9e2fc8b)
+
+
+#### AC Analysis
+
+![image](https://github.com/user-attachments/assets/be5a23ad-fea8-4370-8483-25a9019287d2)
+Gain ≈ 30 dB
+
+Bandwidth ≈ ~250MHz
+
+
+### length = 500nm
+#### Design for Current mirror 1:1 ratio
+
+![image](https://github.com/user-attachments/assets/9ff78412-3cf9-410d-b71e-c11a546df70b)
+l=500n w=64.5u  
+
+#### DC Analysis
+![image](https://github.com/user-attachments/assets/d774d35e-0873-4b56-bdb2-2d414f2692da)
+
+
+#### Transient Analysis
+![image](https://github.com/user-attachments/assets/377c8344-79c9-4434-93e1-6d6dd09e45f6)
+
+
+
+#### AC Analysis
+
+![image](https://github.com/user-attachments/assets/12a67dec-a6c6-4590-b320-146c0d01a398)
+
+Gain ≈ 37.8 dB
+
+Bandwidth ≈ ~143 MHz
+
+
+#### Part 2
+
+#### Design the differential amplifier using the same design specification as differential amplifier experiment. Perform DC analysis,transient analysis, AC analysis.
+
+![image](https://github.com/user-attachments/assets/f1b418ce-e373-4933-9558-46e985fd8af4)
+
+
+#### DC Analysis
+
+![image](https://github.com/user-attachments/assets/67534d76-f70b-40cc-b0fe-ce4f83a6d822)
+
+
+#### Transient Analysis
+![image](https://github.com/user-attachments/assets/ed475e9d-086c-45ed-a8b8-44e20b45a5cb)
+
+
+#### AC Analysis
+![image](https://github.com/user-attachments/assets/d9bfda19-d1f6-4cff-ad25-979e9c034c8f)
+
+
