@@ -48,7 +48,7 @@ Bandwidth ≈ 100 MHz.
 | Model           | NMOSC     | NMOSP     | NMOSP     |
 | MOSFET Length   | 180n     | 180n      | 180n      |
 | MOSFET Width    | 144.5u     | 20u     | 10u     |
-| Threshold Voltage | T0.3662V    | -.3906V     | -.3906V    |
+| Threshold Voltage | 0.3662V    | -.3906V     | -.3906V    |
 #### DC Analysis
 ![image](https://github.com/user-attachments/assets/606dc415-bac7-4f0b-9b04-31934613994d)
 
@@ -72,7 +72,7 @@ Bandwidth ≈ ~200MHz
 | Model           | NMOSC     | NMOSP     | NMOSP     |
 | MOSFET Length   | 180n     | 180n      | 180n      |
 | MOSFET Width    | 84.965u | 20u     | 10u     |
-| Threshold Voltage | T0.3662V    | -.3906V     | -.3906V    |
+| Threshold Voltage | 0.3662V    | -.3906V     | -.3906V    |
 
 #### DC Analysis
 
@@ -101,7 +101,7 @@ l=500n w=64.5u
 | Model           | NMOSC     | NMOSP     | NMOSP     |
 | MOSFET Length   | 500n     | 500n      | 500n      |
 | MOSFET Width    | 64.5u | 10u     | 10u     |
-| Threshold Voltage | T0.3662V    | -.3906V     | -.3906V    |
+| Threshold Voltage | 0.3662V    | -.3906V     | -.3906V    |
 #### DC Analysis
 ![image](https://github.com/user-attachments/assets/d774d35e-0873-4b56-bdb2-2d414f2692da)
 
@@ -119,8 +119,22 @@ Gain ≈ 37.8 dB
 
 Bandwidth ≈ ~143 MHz
 
+Comparison table for all three circuits.
 
-#### Part 2
+| **Circuit**               | **MOSFET** | **Model** | **Width (W)** | **Length (L)** | **W/L Ratio** | **Threshold Voltage (Vth)** |
+|---------------------------|------------|-----------|---------------|----------------|---------------|-----------------------------|
+| **Current Mirror 1:1**    | M1         | NMOSC     | 47.89 µm      | 180 nm         | 266.06        | 0.3662 V                    | 
+|                           | M2         | NMOSP     | 500 µm        | 180 nm         | 2777.78       | -0.3906 V                   | 
+|                           | M3         | NMOSP     | 1 mm          | 180 nm         | 5555.56       | -0.3906 V                   | 
+| **Current Mirror 1:2**    | M1         | NMOSC     | 144.5 µm      | 180 nm         | 802.78        | 0.3662 V                    | 
+|                           | M2         | NMOSP     | 20 µm         | 180 nm         | 2777.78       | -0.3906 V                   | 
+|                           | M3         | NMOSP     |   10 µm       | 180 nm         | 5555.56       | -0.3906 V                   | 
+| **Current Mirror 1:4**    | M1         | NMOSC     |64.5u          |  180 nm        | Not specified | 0.3662 V                    | 
+|                           | M2         | NMOSP     | 10 µm         | 180 nm         | 2777.78       | -0.3906 V                   | 
+|                           | M3         | NMOSP     | 10 µm         | 180 nm         | 5555.56       | -0.3906 V                   | 
+
+
+### Part 2
 
 #### Design the differential amplifier using the same design specification as differential amplifier experiment. Perform DC analysis,transient analysis, AC analysis.
 
