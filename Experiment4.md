@@ -1,4 +1,4 @@
-# Instrumentation Amplifier - Theory
+# Instrumentation Amplifier 
 
 ## Introduction
 
@@ -84,7 +84,7 @@ To achieve **ADM = 20**, solve for `RG`:
 
 
 Given:
-- ADM = 20 V/V
+- 1. ADM = 20 V/V
 - R1 = 100 kΩ
 
 ###  Solving for RG:
@@ -96,8 +96,134 @@ ADM = 1 + (2 * R1) / RG
 => 20 = 1 + (2 * 100k) / RG => 19 = (200k) / RG => RG = 200k / 19 => RG ≈ 10.526 kΩ
 
 ## Circuit Diagram
+![Screenshot 2025-04-15 093125](https://github.com/user-attachments/assets/cc4fb7c3-169d-426b-b088-70a34735a6ce)
 
 
 ## Analysis of Adm
 
+![Screenshot 2025-04-15 092242](https://github.com/user-attachments/assets/e03e2202-2d9d-4d7e-8c16-d1f4cb6b79cb)
+
 ## Analysis of Acm
+
+![Screenshot 2025-04-15 093101](https://github.com/user-attachments/assets/554a2738-3edf-4d4a-928c-289d112f1e0a)
+
+---
+
+###  Common Mode Gain (ACM) Calculation — For ADM = 20
+
+**Observation from waveform:**
+- Output Voltage `Vout ≈ ±5 nV` (peak)
+- Common Mode Input Voltage `Vin_CM = 0.5 V` (peak)
+
+**Formula:**
+
+ACM = Vout / Vin_CM = (5 × 10⁻⁹) / 0.5 = 1 × 10⁻⁸ V/V
+
+
+
+---
+
+### 📊 CMRR Calculation for ADM = 20
+
+CMRR = 20 × log₁₀(ADM / ACM) = 20 × log₁₀(20 / 1×10⁻⁸) = 20 × log₁₀(2 × 10⁹) ≈ 20 × 9.3 = 186 dB
+
+
+ **CMRR = 186 dB**
+
+
+---
+
+###  Final Results
+
+| Parameter | Value         |
+|----------:|---------------|
+| **ADM**   | 20 V/V        |
+| **ACM**   | 1 × 10⁻⁸ V/V  |
+| **CMRR**  | **186 dB**    |
+
+
+
+---
+
+- 2. ADM = 50 V/V
+- R1 = 100 kΩ
+
+##  Calculation of Gain Resistor (RG) for ADM = 50
+
+The differential mode gain (ADM) for a 3-op-amp instrumentation amplifier is given by:
+
+ADM = 1 + (2 * R1) / RG
+
+
+###  Solving for RG:
+
+ADM = 1 + (2 * R1) / RG => 50 = 1 + (2 * 100k) / RG => 49 = 200k / RG => RG = 200k / 49 => RG ≈ 4.0816 kΩ
+
+## Circuit Diagram
+
+![Screenshot 2025-04-15 093406](https://github.com/user-attachments/assets/1c35a084-2467-421d-b6de-a99ddac3f12e)
+
+
+## Analysis of Adm
+
+![Screenshot 2025-04-15 093934](https://github.com/user-attachments/assets/289ff972-afe9-4831-aed3-54fba6cecfa9)
+
+
+## Analysis of Acm
+
+![Screenshot 2025-04-15 093608](https://github.com/user-attachments/assets/9e3665d7-2508-4198-9507-c6f20bd56bad)
+
+##  Simulation: Common Mode Gain (ACM) and CMRR Calculation
+
+###  Circuit Setup
+
+- Both inputs are common-mode signals:  
+  `Vin1 = Vin2 = 0.5 sin(2π·1k·t)`
+- Differential input = 0 → any output is due to **common-mode gain**.
+- Simulation Output:  
+  `Vout ≈ ±5 nV (peak)`
+
+---
+
+###  ACM (Common Mode Gain)
+
+Formula:
+
+ACM = Vout / Vcm
+
+
+Given:
+- Vout = 5 nV = `5 × 10⁻⁹` V
+- Vcm = 0.5 V
+
+Calculation:
+
+ACM = (5 × 10⁻⁹) / 0.5 = 1 × 10⁻⁸ V/V
+
+
+---
+
+###  CMRR (Common Mode Rejection Ratio)
+
+Formula:
+
+CMRR = 20 × log₁₀(ADM / ACM)
+
+For ADM = 50:
+
+CMRR = 20 × log₁₀(50 / 1e-8) = 20 × log₁₀(5 × 10⁹) ≈ 20 × 9.7 ≈ 194 dB
+
+
+---
+
+###  Final Results
+
+| Parameter | Value         |
+|----------:|---------------|
+| **ADM**   | 50 V/V        |
+| **ACM**   | 1 × 10⁻⁸ V/V  |
+| **CMRR**  | **194 dB**    |
+
+>  Very high CMRR indicates excellent common-mode rejection, as expected for a well-balanced 3-op-amp instrumentation amplifier.
+
+
