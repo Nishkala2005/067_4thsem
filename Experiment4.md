@@ -9,6 +9,7 @@ An **Instrumentation Amplifier (In-Amp)** is a precision amplifier designed to a
 ##  Basic 3-Op-Amp Configuration
 
 The classic instrumentation amplifier is built using **three operational amplifiers**:
+![image](https://github.com/user-attachments/assets/e1f9abd3-f1ed-4e20-9f98-6e620ddc6ba3)
 
 
 ###  Key Components:
