@@ -286,5 +286,31 @@ The circuit successfully demonstrates:
 
 ---
 
+# Simulation in Virtual Lab Astable Multivibrator
+## Procedure:
+1.	Connect the components as mentioned below: L1-L12, L14-L12, L16-L12, L4-L9, L8-L9, L10-L19, L3-L17, L11-L13, L7-L19, L6-L13, L2-L13, L5-L15, L18-L9.(For eg. click on 1 and then drag to 12 and so on.)
+2.	Click on 'Check Connection' button to check the connections.
+3.	If connected wrong, click on the wrong connection. Else click on 'Delete all connection' button to erase all the connections.
+4.	Intially set R a=3.3 kΩ, R b=6.8kΩ, C=0.1µf, Vcc=5 V.
+5.	Click on "Calculate" button.
+6.	Now note the output voltage.
+7.	Click on "Plot" button to plot Output Voltage, Capacitance Voltage
+8.	Click on "Clear" button to clear the data.
+9.	Repeat the experiment for another set of resistance value.
+10.	Set the Resistance (Ra) value (1 kΩ - 10 kΩ).
+11.	Set the Resistance (Rb) value (1 kΩ - 10 kΩ).
+12.	Set the Capacitance (C) value (0.1 µf - 10 µf) .
+13.	Set supply voltage (Vcc).
 
 
+![WhatsApp Image 2025-05-27 at 06 54 29_10bcefe9](https://github.com/user-attachments/assets/330bd538-b2d0-4d18-a87a-8862592f3c5b)
+
+![WhatsApp Image 2025-05-27 at 06 54 42_9b8fb3ca](https://github.com/user-attachments/assets/fe5d94d8-81f7-4eef-92aa-3ac0f0a5dca6)
+
+![WhatsApp Image 2025-05-27 at 06 55 08_11bb9bac](https://github.com/user-attachments/assets/3ce789a6-53d1-43f9-b5af-b13978f089ba)
+
+![WhatsApp Image 2025-05-27 at 06 55 49_a79bb99f](https://github.com/user-attachments/assets/67dae652-be99-47d3-9af3-9d954cb51051)
+
+![WhatsApp Image 2025-05-27 at 06 56 00_6396b8a5](https://github.com/user-attachments/assets/86499359-8ff5-4d81-98d9-f165271d5309)
+
+![WhatsApp Image 2025-05-27 at 06 56 14_c3eb7d00](https://github.com/user-attachments/assets/55e5cca5-98bc-4909-8d15-27ac12966165)
